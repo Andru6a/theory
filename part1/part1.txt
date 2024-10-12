@@ -1,0 +1,28 @@
+В косноль будет выведено 
+Bad: undefined
+Bad: undefined
+Bad: undefined
+Bad: undefined
+C задержкой в 3 секунды выкенет все 4 итерации разом
+Так происходит, потому что цикл уже полностью отработал и переменнаая i теперь равно 4, у массива нет 4-го индекса
+
+// Исправление на let, тогда setTimeout будет помнить значение i
+const arr = [10, 12, 15, 21];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log("цикл пошел");
+  setTimeout(function () {
+    console.log(arr[i] > 13 ? `Good: ${arr[i]}` : `Bad: ${arr[i]}`);
+  }, 3000);
+}
+
+// Оставить var, но использовать самовызывающуюся функцию, которая замыкает в себе именно значение i, а не ссылку на i
+const arr2 = [10, 12, 15, 21];
+
+for(var i = 0; i < arr2.length; i++){
+  (function(i) {
+    setTimeout(function () {
+      console.log(arr2[i] > 13 ? `Good: ${arr2[i]}` : `Bad: ${arr2[i]}`);
+    }, 3000);
+  })(i);
+} 

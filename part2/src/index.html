@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <main>
+    <div class="hero">
+      <div class="hero__wrapper">
+        <div class="container">
+          <h1 class="hero__title montserrat-400">Стань нашим партнером!</h1>
+          <button class="button modal__open">Стать партнёром проекта</button>
+          <label class="table__search">Поиск по заголовку
+            <input type="text" class="table__search-input" required minlength="3">
+          </label>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <form class="modal__form">
+        <div class="modal__wrapper">
+          <h3 class="modal__title montserrat-400">Стать партнёром проекта</h3>
+
+          <div class="modal__header">
+            <div class="modal__header-rows">
+              <div class="modal__row">
+                <input type="text" name="name" class="modal__row-input modal__row-input--withLable" required
+                  minlength="2" maxlength="20">
+                <label class="modal__row-label modal__row-label--withLabel">Название организации</label>
+              </div>
+              <div class="modal__row">
+                <input name="tel" type="tel" class="modal__row-input modal__row-input--withLable" required
+                  pattern="^\+7\s\d{3}\s\d{3}-\d{2}-\d{2}$" title="+7 999 888-11-22">
+                <label class="modal__row-label modal__row-label--withLabel">Телефон</label>
+              </div>
+              <div class="modal__row">
+                <input name="email" type="email" class="modal__row-input modal__row-input--withLable" required>
+                <label class="modal__row-label modal__row-label--withLabel">E-mail</label>
+              </div>
+            </div>
+            <div class="modal__header-content">
+              <div class="modal__header-clearBtn">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15.2983 2.65842C15.7545 2.20342 15.7545 1.46375 15.2983 1.00875C14.8433 0.552584 14.1048 0.552584 13.6486 1.00875L7.90398 6.75342L2.15814 1.00875C1.70314 0.552584 0.963476 0.552584 0.508476 1.00875C0.0523096 1.46375 0.0523096 2.20342 0.508476 2.65842L6.25314 8.40425L0.508476 14.1489C0.0523096 14.6051 0.0523096 15.3436 0.508476 15.7986C0.963476 16.2548 1.70314 16.2548 2.15814 15.7986L7.90398 10.0539L13.6486 15.7986C14.1048 16.2548 14.8433 16.2548 15.2983 15.7986C15.7545 15.3436 15.7545 14.6051 15.2983 14.1489L9.55364 8.40425L15.2983 2.65842Z"
+                    fill="#6A6E72" />
+                </svg>
+              </div>
+              <label for="upload" class="modal__row-label--img modal__row-label--withLabel">Логотип (jpeg, png)
+                <img class="modal__header-content-preview" src="">
+                <div class="modal__header-content-btn">
+                  <img src="./assets/modal/uploadIcon.svg" alt="иконка загрузки">
+                  <p>Выберите файл</p>
+                </div>
+              </label>
+              <input type="file" id="upload" name="upload" class="modal__row-input" accept="image/*" required>
+            </div>
+          </div>
+
+          <div class="modal__row">
+            <select class="modal__row-input modal__row-input--withLable" required name="directions">
+              <option value="Экология">Экология</option>
+              <option value="Направление 2">Направление 2</option>
+              <option value="Направление 3">Направление 3</option>
+            </select>
+            <label class="modal__row-label modal__row-label--withLabel">Направление</label>
+            <img class="modal__row-svg" src="./assets/modal/selectArrow.svg" alt="">
+          </div>
+          <div class="modal__row">
+            <input type="url" class="modal__row-input" name="urlSite">
+            <img class="modal__row-svg" src="./assets/modal/site.svg" alt="">
+          </div>
+          <div class="modal__row">
+            <input type="url" class="modal__row-input" name="urlVk">
+            <img class="modal__row-svg" src="./assets/modal/vk.svg" alt="">
+          </div>
+          <div class="modal__row">
+            <input type="url" class="modal__row-input" name="urlClass">
+            <img class="modal__row-svg" src="./assets/modal/odnoklassniki.svg" alt="">
+          </div>
+          <div class="modal__row">
+            <input type="url" class="modal__row-input" name="urlFb">
+            <img class="modal__row-svg" src="./assets/modal/facebook.svg" alt="">
+          </div>
+          <div class="modal__row">
+            <input type="url" class="modal__row-input" name="urlIns">
+            <img class="modal__row-svg" src="./assets/modal/Instagram.svg" alt="">
+          </div>
+          <div class="modal__row">
+            <input type="url" class="modal__row-input" name="urlYt">
+            <img class="modal__row-svg" src="./assets/modal/youtube.svg" alt="">
+          </div>
+          <div class="modal__row">
+            <input type="text" class="modal__row-input modal__row-input--withLable" name="supervisor">
+            <label class="modal__row-label">Руководитель</label>
+          </div>
+
+          <div class="modal__form-control">
+            <button type="submit" class="modal__form-button button lato">Стать партнёром проекта</button>
+            <button type="button" class="modal__close">Отменить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="container">
+      <div class="table">
+        <table class="table__wrapper">
+          <thead>
+            <tr class="table__item">
+              <th class="table__item-header" data-value="id">
+                Номер
+              </th>
+              <th class="table__item-header" data-value="title">
+                Заголовок
+              </th>
+              <th class="table__item-header" data-value="body">
+                Описание
+              </th>
+            </tr>
+          </thead>
+          <tbody class="table__content"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
