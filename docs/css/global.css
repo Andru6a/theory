@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  color: #0C1014;
+  background-color: #fff;
+  transition: var(--transition);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal--open{
+  overflow-y: hidden;
+}
+
+.montserrat-400 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.button {
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--main-accent-text);
+  padding: 10px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background-color: var(--main-accent-hover);
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero__wrapper{
+  padding-top: 50px;
+}
